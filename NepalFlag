@@ -1,0 +1,85 @@
+#include<iostream>
+using namespace std;
+void alt_pattern(int n)
+{
+	int m;
+	for(m=0; m<n; m++)
+	{
+		if(m%2==0)
+		cout<<"*";
+		else
+		cout<<" ";
+	}
+}
+void st_pattern(int a)
+{
+	int i;
+	for(i=0; i<a; i++)
+	{
+		cout<<"*";
+	}
+}
+void newline()
+{
+	cout<<"\n";
+}
+int main()
+{
+	int i,j,k,l,m,p,var=10;
+	system("color 5");
+	st_pattern(1);
+	newline();
+	alt_pattern(3);
+	newline();
+	cout<<"* ** *";
+	newline();
+	for(i=0; i<9; i++)
+	{
+		alt_pattern(3);
+		for(j=0; j<=i; j++)
+		{
+			if((i==5 && j==3) || (i==5 && j==1) || (i==5 && j==2) || (i==6 && j==2) || (i==5 && j==4) ||(i==6 && j==3))
+			cout<<"* ";
+			else
+			cout<<"  ";
+		}
+		alt_pattern(3);
+		newline();				
+	}
+	for(p=0; p<2; p++)
+	{
+		if(p==1)
+		newline();
+		alt_pattern(3);
+	    for(k=0; k<8; k++)
+	    {	   	
+		    if(p==0 && k==6)
+		    cout<<"*";
+		    else
+		    cout<<" ";
+	    }
+	    if(p==0)	    	      
+	    alt_pattern(16);	
+	    else
+	    alt_pattern(18);	    
+	}
+	newline();
+	for(m=0; m<14; m++)
+	{
+		alt_pattern(3);
+		for(l=0; l<var; l++)
+	    {
+	    	if((m==7 && l==4) || (m==6 && l==6) || (m==6 && l==9) || (m==7 && l==12) || (m==8 && l==6) || (m==8 && l==9))
+	    	cout<<"*";
+	    	else				
+		    cout<<" ";		
+	    }
+	    alt_pattern(3);
+	    var=var+2;
+	    newline();
+	}
+	alt_pattern(44);
+	newline();
+	alt_pattern(46);
+		
+}
