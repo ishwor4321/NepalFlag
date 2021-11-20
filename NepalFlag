@@ -26,7 +26,6 @@ void newline()
 int main()
 {
 	int i,j,k,l,m,p,var=10;
-	system("color 5");
 	st_pattern(1);
 	newline();
 	alt_pattern(3);
